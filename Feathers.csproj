@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FeatherItem.cs" />
     <Compile Include="FeatherLogger.cs" />
     <Compile Include="FeatherStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
