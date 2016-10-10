@@ -6,8 +6,8 @@
     <ProjectGuid>{606443F0-AD40-4F71-A75C-C086ED0AD22D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FeathersTests</RootNamespace>
-    <AssemblyName>FeathersTests</AssemblyName>
+    <RootNamespace>Feathers_Tests</RootNamespace>
+    <AssemblyName>Feathers_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -72,6 +72,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="TestFeatherLogger.cs" />
     <Compile Include="TestFeatherStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
