@@ -62,42 +62,42 @@ namespace Feathers
 
         }
 
-        public void Error(string s)
+        public string Error(string s)
         {
             if (this.TraceLevel >= TRACE_LEVEL_ERROR) WriteOneLine("ERROR: " + s);
+            return s;
         }
 
-        public void Error(Exception ex)
+        public string Error(Exception ex)
         {
-            if (this.TraceLevel >= TRACE_LEVEL_ERROR)
-            {
-                WriteOneLine("ERROR: Got exception '" + ex.Message + "'");
-                if (ex.InnerException != null)
-                {
-                    WriteOneLine("ERROR: Got inner exception '" +
-                        ex.InnerException.Message + "'");
-                }
-            }
+            string ExceptionMessage = "Exception: '" + ex.Message + "'" +
+                ex.InnerException != null ? " Inner exception: '" + ex.InnerException.Message + "'" : "";
+            if (this.TraceLevel >= TRACE_LEVEL_ERROR) WriteOneLine("ERROR: " + ExceptionMessage);
+            return ExceptionMessage;
         }
 
-        public void Warn(string s)
+        public string Warn(string s)
         {
             if (this.TraceLevel >= TRACE_LEVEL_WARN) WriteOneLine("WARN : " + s);
+            return s;
         }
 
-        public void Sql(string s)
+        public string Sql(string s)
         {
             if (this.TraceLevel >= TRACE_LEVEL_SQL) WriteOneLine("S Q L: " + s);
+            return s;
         }
 
-        public void Info(string s)
+        public string Info(string s)
         {
             if (this.TraceLevel >= TRACE_LEVEL_INFO) WriteOneLine("INFO : " + s);
+            return s;
         }
 
-        public void Extreme(string s)
+        public string Extreme(string s)
         {
             if (this.TraceLevel >= TRACE_LEVEL_EXTREME) WriteOneLine("EXTRM: " + s);
+            return s;
         }
 
         public void OpenSection(string s)

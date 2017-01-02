@@ -15,6 +15,19 @@ namespace Feathers
                 .Replace("\t", @"{\t}");
         }
 
+        public static string GetTextBetween(string baseText, string text1, string text2)
+        {
+            string returnText = null;
+            if (baseText.IndexOf(text1) != -1)
+            {
+                var newBaseText = baseText.Substring(baseText.IndexOf(text1) + text1.Length);
+                if (newBaseText.IndexOf(text2) != -1)
+                    returnText = newBaseText.Substring(0, newBaseText.IndexOf(text2));
+            }
+
+            return returnText;
+        }
+
         public static string TraceString(int i)
         {
             return i.ToString();
